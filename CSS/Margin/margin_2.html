@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            border:2px solid green;
+            width:300px;
+            height:250px;
+            margin:auto;
+        }
+        .child1{
+            border:2px solid green;
+            width: 50px;
+            height:50px;
+            margin: inherit;
+        }
+        .child2{
+            border:2px solid green;
+            width: 50px;
+            height:50px;
+            margin: initial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Margin </h1>
+    <div class="parent">
+        <div class="child1"> child 1</div>
+        <div class="child2"> child 2</div>
+    </div>
+</body>
+</html>
