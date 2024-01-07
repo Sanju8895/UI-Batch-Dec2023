@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          .parent{
+        border:2px solid green;
+        width:200px;
+        height:200px;
+        position: relative;
+        padding:8px;
+    }
+    .child{
+        border:2px solid red;
+        height:80px;
+        position:absolute;
+        
+    }
+    .child1{
+        top:0;
+        right:0;
+    }
+    .child2{
+        bottom: 0;
+        left:0;
+    }
+
+    .child3{
+        bottom: 0;
+        right:0;
+    }
+    .child4{
+        top: 0;
+        left: 0;
+    }
+    </style>
+</head>
+<body>
+    <h1>Postion:</h1>
+    <p>The position property specifies the type of positioning method used for an element (static, relative, fixed, absolute or sticky).</p>
+    <ul>
+        <li>Static: HTML elements are positioned static by default.</li>
+        <li>Relative: An element with position: relative; is positioned relative to its normal position.</li>
+        <li>Absolute: An element with position: absolute; is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed)</li>
+        <li>Fixed:An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. The top, right, bottom, and left properties are used to position the element.</li>
+        <li>Sticky: An element with position: sticky; is positioned based on the user's scroll position.</li>
+
+        <b>Note: If you are using postion property insted of using margin-top, bottom, left and and right. You can write top, buttom, right, left</b>
+    </ul>
+   
+    <div class="parent">
+        <div class="child child1"> child 1</div>
+        <div class="child child2"> child 2</div>
+        <div class="child child3"> child 3</div>
+        <div class="child child4"> child 4</div>
+    </div>
+</body>
+</html>
