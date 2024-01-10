@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #descendant p{
+            color:red;
+        }
+        #child > p {
+            color:yellow;
+        }
+        #adjacent{
+            border:2px solid green;
+        }
+        #adjacent + p{
+            color:blueviolet;
+        }
+        #general_sibling{
+            border:2px solid red;
+        }
+        #general_sibling ~ p{
+            color:aqua;
+        }
+    </style>
+</head>
+<body>
+     <h1>Combinator in CSS</h1>
+     <ul>
+       <li> descendant selector (space)</li>
+       <li> child selector (>) </li>
+       <li> adjacent sibling selector (+)</li>
+       <li> general sibling selector (~)</li>
+     </ul> 
+
+     <h2>Descendant Selector</h2>
+      <div id="descendant">
+         <p>Paraghraph 1</p>
+         <p>Paraghraph 2</p>
+         <p>Paraghraph 3</p>
+         <p>Paraghraph 4</p>
+         <section>This is a section 
+            <p>this is section para 1</p>
+            <p>this is section para 2</p>
+         </section>
+      </div>
+
+      <h2>Child Selector (>)</h2>
+      <div id="child">
+        <p>Paraghraph 1</p>
+        <p>Paraghraph 2</p>
+        <p>Paraghraph 3</p>
+        <p>Paraghraph 4</p>
+        <section>This is a section 
+           <p>this is section para 1</p>
+           <p>this is section para 2</p>
+        </section>
+     </div>
+
+     <h2>adjacent sibling selector (+)</h2>
+     <div id="adjacent">
+        <p>Paraghraph 1</p>
+        <p>Paraghraph 2</p>
+        <p>Paraghraph 3</p>
+        <p>Paraghraph 4</p>
+        <section>This is a section 
+           <p>this is section para 1</p>
+           <p>this is section para 2</p>
+        </section>
+     </div>
+     <p>outside paraghraph 1</p>
+     <p>outside paraghraph 2</p>
+     <p>outside paraghraph 3</p>
+
+     <h2>general sibling selector (~)</h2>
+     <div id="general_sibling">
+        <p>Paraghraph 1</p>
+        <p>Paraghraph 2</p>
+        <p>Paraghraph 3</p>
+        <p>Paraghraph 4</p>
+        <section>This is a section 
+           <p>this is section para 1</p>
+           <p>this is section para 2</p>
+        </section>
+     </div>
+     <p>outside paraghraph 1</p>
+     <p>outside paraghraph 2</p>
+     <p>outside paraghraph 3</p>
+</body>
+</html>
