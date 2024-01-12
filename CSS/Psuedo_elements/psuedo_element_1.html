@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .para::selection{
+         background-color: brown;
+         /* color:#fff; */
+         color:yellow
+        }
+        .para::first-letter{
+            font-size: 50px;
+            color:red;
+        }
+        .para::first-line{
+            color:green;
+        }
+        .para::before{
+            /* content: url('../../HTML/img.jpeg'); */
+            content: " Sanjaya ";
+        }
+        .para::after{
+            content: url('../../HTML/img.jpeg');
+        }
+        ul li::marker{
+            color:yellow;
+            font-size:30px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Selection psuedo Element</h1>
+    <h2>Heading</h2>
+    <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis quae rem nesciunt possimus aut! Molestiae exercitationem, nobis repellat, et unde ipsa delectus quasi dignissimos veritatis sunt nulla. Blanditiis, facilis voluptatum.
+    Voluptate voluptas tempore delectus, sunt qui amet provident. Commodi magnam sed veniam veritatis dolore dolorem exercitationem tempora dolorum quod ab, libero iure perferendis quae, nulla nihil quasi sunt ducimus cum.
+    Aut eaque cupiditate, libero reprehenderit nihil quam impedit accusantium rerum ipsa magnam maiores assumenda cumque dolore rem minus quis voluptas nam deleniti eos eius ipsum maxime cum sequi quod? Ab?
+    Labore officiis minima sunt corrupti! Sequi voluptatibus in odit, consequatur ullam officia! Nostrum modi eos, amet architecto id enim possimus, saepe est delectus sunt accusamus. Aliquid provident minima velit totam!</p>
+
+    <h1>Marker suedo elements</h1>
+    <h2>Simple heading</h2>
+   
+    <ul>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+    </ul>
+</body>
+</html>
