@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            border:2px solid green;
+            display: flex;
+            flex-wrap: wrap;
+            /* flex-direction:column-reverse */
+            flex-direction:column;
+            /* flex-direction:row */
+            /* justify-content: center; */
+            /* justify-content: start; */
+            /* justify-content: end; */
+            /* justify-content: space-around; */
+            /* justify-content: space-between; */
+            /* align-items: start; */
+            /* align-items: end; */
+            /* align-items: center; */
+
+        }
+        .child{
+            height:100px;
+            width:100px;
+            background-color: blue;
+            margin:10px;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flex container</h1>
+    <ul>
+       <li> flex-wrap</li>
+       <li> flex-direction</li>
+       <li> flex-flow</li>
+       <li> justify-content</li>
+       <li> align-items</li>
+       <li> align-content</li>
+    </ul>
+
+    <div class="parent">
+        <div class="child">Child 1</div>
+        <div class="child">Child 2</div>
+        <div class="child">Child 3</div>
+        <div class="child">Child 4</div>
+        <!-- <div class="child">Child 5</div>
+        <div class="child">Child 6</div>
+        <div class="child">Child 7</div>
+        <div class="child">Child 8</div>
+        <div class="child">Child 9</div>
+        <div class="child">Child 10</div> -->
+    </div>
+</body>
+</html>
