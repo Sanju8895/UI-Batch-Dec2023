@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./@mediaqueries.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="script.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;1,600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  color: rgb(85, 85, 85);
+}
+
+a,
+.btn {
+  transition: all 300ms ease;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+#nav-desktop {
+  justify-content: space-around;
+  align-items: center;
+  height: 17vh;
+}
+
+#nav-desktop,
+.nav-links {
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  text-decoration-color: white;
+}
+
+a:hover {
+  color: gray;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(181, 181, 181);
+}
+
+.nav-links {
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+.logo {
+  font-size: 2rem;
+}
+
+.logo:hover {
+  cursor: default;
+}
+
+#profile {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  height: 80vh;
+}
+
+.profile-img {
+  display: flex;
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+ 
+.logo span{
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.profile-main-text {
+  align-self: center;
+  text-align: center;
+}
+
+.profile-title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.profile-heading {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.profile-role {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.social-icons-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+.icon {
+  cursor: pointer;
+  height: 2rem;
+}
+
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  font-weight: 600;
+  transition: all 300ms ease;
+  padding: 0.9rem;
+  width: 8rem;
+  border-radius: 2rem;
+}
+
+.btn-color-1,
+.btn-color-2 {
+  border-color: rgb(163, 163, 163)
+}
+
+.btn-color-1:hover,
+.btn-color-2:hover {
+  cursor: pointer;
+}
+
+.btn-color-1,
+.btn-color-2:hover {
+  background: rgb(53, 53, 53);
+  color: white;
+}
+
+.btn-color-1:hover {
+  background: rgb(0, 0, 0);
+}
+
+.btn-color-2 {
+  background: none;
+}
+
+.btn-color-2:hover {
+  border: rgb(255, 255, 255) 0.1rem solid;
+}
+
+.btn-container {
+  gap: 1rem;
+}
+#about{
+  margin-top: 2rem;
+}
+#experience{
+  margin-top: 10rem;
+}
+#project{
+  margin-top: 10rem;
+}
+#contact{
+  margin-top: 12rem;
+}
+.about-main-text {
+  text-align: center;
+}
+
+.text-1 {
+  color: rgb(85, 85, 85);
+  font-size: 1.1rem;
+}
+
+.text-2 {
+  color: black;
+  font-weight: 600;
+  font-size: 3rem;
+}
+
+.about-main-section {
+  display: flex;
+  justify-content: space-around;
+}
+
+.about-img-section img {
+  height:400px;
+  width: 400px;
+  margin: auto 3rem;
+  border-radius: 50%;
+  
+}
+.about-img-section{
+  filter: grayscale(300%);
+  transition: filter 300ms;
+}
+.about-img-section:hover{
+  filter: grayscale(0%);
+}
+
+
+.about-container {
+  padding: 1.2rem;
+  flex: 1;
+  background: white;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  text-align: center;
+}
+
+.about-exp-section {
+  justify-content: space-between;
+  height: 80%;
+  align-self: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.about-flex,
+.about-exp-section {
+  display: flex;
+  gap: 2rem;
+  margin: 0 2rem;
+}
+
+.arrow {
+  position: absolute;
+  right: 4rem;
+}
+
+.arrow1 {
+  position: absolute;
+  right: 4rem;
+}
+
+.experience-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin: 2rem;
+}
+
+.details-container {
+  padding: 1rem;
+  flex: 1;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-radius: 2rem;
+  background-color: white;
+  border-color: rgb(163, 163, 163);
+}
+
+.article-container {
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: space-around;
+}
+
+article {
+  display: flex;
+  width: 10rem;
+  text-align: center;
+  justify-content: space-around;
+}
+
+.sub-name {
+  text-align: center;
+  margin: 1.2rem;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: 4fr 4fr 4fr;
+  gap: 2rem;
+  margin: 2rem auto;
+  margin: 3rem;
+}
+
+.card {
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-radius: 2rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.card img {
+  border-radius: 2rem;
+  width: 80%;
+  height: 80%;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  background: (250, 250, 250);
+  margin: 2rem auto;
+  padding: 0.5rem;
+  width: 30rem;
+}
+
+.contact-info-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+
+.contact-info-container p {
+  font-size: larger;
+  margin: 0.4rem;
+}
+
+#contact {
+  height: inherit;
+}
+
+footer {
+  height: 26vh;
+  margin: 5rem 1rem;
+}
+
+.footer {
+  text-align: center;
+  color: gray;
+  font-size: 1rem;
+  margin-top: 5rem;
+}
+
+#logo{
+  display: none;
+  cursor: pointer;
+}
+
+.home-btn{
+  border: none;
+  color:white;
+  padding: 1rem;
+  border-radius: 50%;
+  background-color: black;
+  cursor: pointer;
+}
+.size{
+  font-size: 2rem;
+}
+body {
+  background-color: #fff;
+  color: #333;
+  /* Add other light mode styles here */
+}
+
+
+.dark-mode  {
+  background-color: #121212;
+  color: #fff;
+  /* Other dark mode styles */
+}
+
+.dark-mode a{
+  color: white;
+}
+.dark-mode .btn{
+  color: white;
+}
+.dark-mode .size{
+  color: #fff;
+}
+.dark-mode .text-2{
+  color: #fff;
+}
+.dark-mode .about-container h2{
+  color: black;
+}
+.dark-mode .details-container h2{
+  color: black;
+}
+.dark-mode .exp{
+  color: rgb(197, 16, 164);
+}
+
+.home-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #333;
+}
+
+
+/* //menu toogle */
+
+#menu{
+  display: none;
+}
+
+
+@media screen and (max-width: 1400px) {
+  #profile {
+    height: 83vh;
+    margin-bottom: 6rem;
+  }
+  .about-exp-section {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+ 
+  #experience,
+  .experience-container {
+    margin-top: 2rem;
+  }
+  #profile,
+  .about-main-section {
+    display: block;
+  }
+  .profile-img img{
+    height: 300px;
+    width: 300px;
+    margin-left: 18rem;
+    margin-top: 4rem;
+  }
+  .about-img-section img {
+    height: 350px;
+    width: 350px;
+    margin: 0 17rem;
+    border-radius: 50%;
+  }
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+  width: 27rem;
+}
+  section,
+  .section-container {
+    height: fit-content;
+  }
+  section {
+    margin: 0 5%;
+  }
+ 
+  .about-containers {
+    margin-top: 0;
+  }
+  #nav-desktop{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+#about {
+  margin-top: 14rem;
+}
+}
+
+@media screen and (max-width: 600px){
+  section{
+    margin: 0 5%;
+  }
+  .profile-img img {
+    height: 289px;
+    width: 282px;
+    margin-left: 7rem;
+    margin-top: 4rem;
+}
+.about-img-section img {
+  height: 250px;
+  width: 250px;
+  margin: 0 8rem;
+  /* border-radius: 50%; */
+}
+}
+
+@media screen and (max-width: 480px){
+  section{
+    margin: 0 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .nav-links {
+    display: none;
+}
+.arrow {
+  display: none;
+}
+.arrow1 {
+  display: none;
+}
+.profile-img {
+  height: auto;
+}
+.profile-img img {
+  margin-left: 5rem;
+  height: 220px;
+  width: 220px;
+  margin-top: 1rem;
+}
+
+#about {
+  margin-top: 6rem;
+}
+.about-text-container{
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.about-text-container {
+ display: none;
+}
+#project {
+  margin-top: 6rem;
+}
+
+.card-container {
+    /* display: grid; */
+    /* grid-template-columns: 4fr 4fr 4fr; */
+    gap: 2rem;
+    margin: 2rem auto;
+    /* margin: 3rem; */
+}
+.card {
+  width: 19rem;
+}
+#profile, .about-main-section {
+  /* display: block; */
+  display: flex;
+  flex-direction: column;
+}
+.contact-info {
+display: none;
+}
+#contact {
+  margin-top: 7rem;
+}
+.footer{
+  margin-top: 0;
+}
+
+}
+
+
+@media screen and (max-width: 370px){
+ #profile,#about,#experience,#project{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  section{
+    margin: 0 60%;
+  }.profile-img img {
+    margin-left: 5rem;
+    height: 200px;
+    width: 200px;
+    margin-top: 2rem;
+}
+.card-container {
+  /* display: grid; */
+  /* grid-template-columns: 4fr 4fr 4fr; */
+  gap: 2rem;
+  margin: 0;
+  /* margin: 2rem auto; */
+  /* margin: 3rem; */
+}
+.about-main-text {
+  text-align: center;
+  width: 29rem;
+}
+.footer {
+  text-align: center;
+  width: 24rem;}
+}
+    </style>
+</head>
+<body>
+    <nav>
+        <div id="nav-desktop">
+            <div class="logo">
+                <button onclick="toggleDarkMode()" class="home-btn"><i class="fas fa-home size"></i></button> > <span>
+                    press home icon to enable dark mode
+                </span>
+            </div>
+            <div id="list">
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#project">Project</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li id="menu">
+                        <i class="fas fa-bars"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section id="profile">
+        <div class="profile-img">
+            <img src="./assets/web-developer-illustration-503x512-mega3xxj.png" alt="MyImage" />
+        </div>
+        <div class="profile-main-text">
+            <div class="profile-text-container">
+                <p class="profile-title">Hello, I'm </p>
+                <h2 class="profile-heading">
+                    Subham Behera
+                </h2>
+                <p class="profile-role">
+                    FrontEnd Developer
+                </p>
+            </div>
+            <div class="btn-container">
+                <button class="btn btn-color-2" onclick="window.open('./assets/SUBHAM BEHERA.pdf')">
+                    Download CV
+                </button>
+                <button class="btn btn-color-1" onclick="location.href='./#contact'">
+                    Contact Info
+                </button>
+            </div>
+            <div class="social-icons-container">
+                <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon"
+                    onclick="location.href='https://www.linkedin.com/in/subham-behera-20bb03229/'" />
+                <img src="./assets/github.png" alt="My Github profile" class="icon"
+                    onclick="location.href='https://github.com/Subham-de'" />
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <div class="about-main-text">
+            <p class="text-1">Get To Know More</p>
+            <h3 class="text-2">About Me</h3>
+        </div>
+        <div class="about-main-section">
+            <div class="about-img-section">
+                <img src="./assets/unnamed.jpg" />
+            </div>
+            <div class="about-exp-section">
+                <div class="about-flex">
+                    <div class="about-container">
+                        <img src="./assets/experience.png" class="icon" />
+                        <h2>Experience</h2>
+                        <p>
+                            Personal Projects <br>
+                            Frontend Development
+                        </p>
+                    </div>
+                    <div class="about-container">
+                        <img src="./assets/education.png" class="icon" />
+                        <h2>Education</h2>
+                        <p>
+                            Diploma <br> Electronics and Telecommunication Engineering
+                        </p>
+                    </div>
+                </div>
+                <div class="about-text-container">
+                    I've made a personal project using various frontend tech like HTML, CSS, and JavaScript, React.js.
+                    This app showcases my frontend development skills. It incorporates interactive elements, dynamic
+                    content presentation, and a user-friendly interface.
+                </div>
+            </div>
+        </div>
+        <img src="./assets/arrow.png" class=" icon arrow " onclick="location.href='./#experience'">
+    </section>
+    <section id="experience">
+        <div class="about-main-text">
+            <p class="text-1">Explore My</p>
+            <h3 class="text-2">Experience</h3>
+        </div>
+        <div class="experience-container">
+            <div class="details-container">
+                <h2 class="sub-name">FrontEnd Developement</h2>
+                <div class="article-container">
+                    <article>
+                        <img src="./assets/checkmark.png" class="icon" alt="experience" />
+                        <div class="exp">
+                            <h3>HTML</h3>
+                            <p>Experience</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="./assets/checkmark.png" class="icon" alt="experience" />
+                        <div class="exp">
+                            <h3>CSS</h3>
+                            <p>Intermediate</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="./assets/checkmark.png" class="icon" alt="experience" />
+                        <div class="exp">
+                            <h3>JavaScript</h3>
+                            <p>Experience</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="./assets/checkmark.png" class="icon" alt="experience" />
+                        <div class="exp">
+                            <h3>Bootstrap</h3>
+                            <p>Experience</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="./assets/checkmark.png" class="icon" alt="experience" />
+                        <div class="exp">
+                            <h3>Typescript</h3>
+                            <p>Intermediate</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="./assets/checkmark.png" class="icon" alt="experience" />
+                        <div class="exp">
+                            <h3>SASS</h3>
+                            <p>Basic</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="./assets/checkmark.png" class="icon" alt="experience" />
+                        <div class="exp">
+                            <h3>ReactJs</h3>
+                            <p>Intermediate</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="./assets/checkmark.png" class="icon" alt="experience" />
+                        <div class="exp">
+                            <h3>Material UI</h3>
+                            <p>Intermediate</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!--  backend tech -->
+            <div class="details-container">
+                <h2 class="sub-name">Backend Developement</h2>
+                <div class="article-container">
+                    <article>
+                        <img src="./assets/checkmark.png" class="icon" alt="experience" />
+                        <div class="exp">
+                            <h3>NodeJs</h3>
+                            <p>Basic</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="./assets/checkmark.png" class="icon" alt="experience" />
+                        <div class="exp">
+                            <h3>ExpressJS</h3>
+                            <p>Intermediate</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="./assets/checkmark.png" class="icon" alt="experience" />
+                        <div class="exp">
+                            <h3>MongoDB</h3>
+                            <p>Intermediate</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="./assets/checkmark.png" class="icon" alt="experience" />
+                        <div class="exp">
+                            <h3>RESTAPI</h3>
+                            <p>Intermediate</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+        <img src="./assets/arrow.png" class=" icon arrow1 " onclick="location.href='./#project'">
+    </section>
+    <section id="project">
+        <div class="about-main-text">
+            <p class="text-1">Browse My Recent</p>
+            <h3 class="text-2">Projects</h3>
+        </div>
+        <div class="card-container">
+            <div class="card">
+                <img src="./assets/project-1.png" class="project-img" />
+                <h2>Coming Soon</h2>
+                <div class="button-container">
+                    <button class="btn btn-color-2">Github</button>
+                    <button class="btn btn-color-2">LiveDemo</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./assets/project-2.png" class="project-img" />
+                <h2>Coming Soon</h2>
+                <div class="button-container">
+                    <button class="btn btn-color-2">Github</button>
+                    <button class="btn btn-color-2">LiveDemo</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./assets/project-3.png" class="project-img" />
+                <h2>Coming Soon</h2>
+                <div class="button-container">
+                    <button class="btn btn-color-2">Github</button>
+                    <button class="btn btn-color-2">LiveDemo</button>
+                </div>
+            </div>
+        </div>
+        <img src="./assets/arrow.png" class=" icon arrow1 " onclick="location.href='./#contact'">
+    </section>
+    <section id="contact">
+        <div class="about-main-text">
+            <p class="text-1">Get in Touch</p>
+            <h3 class="text-2">Contact Me</h3>
+        </div>
+        <div class="contact-info">
+            <div class="contact-info-container">
+                <img src="./assets/email.png" class="icon" alt="mail" />
+                <p>
+                    <a href="mailto:'subhambehera522@gmail.com'">Example@gmail.com</a>
+                </p>
+            </div>
+            <div class="contact-info-container">
+                <img src="./assets/linkedin.png" class="icon" alt="linkedin" />
+                <p>
+                    <a href="https://www.linkedin.com">LinkedIn</a>
+                </p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <nav>
+            <div id="nav-desktop">
+                <div>
+                    <ul class="nav-links">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#project">Project</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="footer">
+           <p> Copyright © 2023 Subham Behera. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script>
+          let isDarkMode = false;
+
+function toggleDarkMode() {
+    const body = document.body;
+    const homeBtn = document.querySelector('.home-btn');
+    const span = document.querySelector('.logo > span');
+    
+    if (isDarkMode) {
+        body.classList.remove('dark-mode');
+        homeBtn.innerHTML = '<i class="fas fa-home size"></i>';
+        span.innerHTML = 'press home icon to enable dark mode';
+    } else {
+        body.classList.add('dark-mode');
+        homeBtn.innerHTML = '<i class="fas fa-sun size"></i>';
+        span.innerHTML = 'press home icon to enable light mode';
+    }
+    
+    isDarkMode = !isDarkMode;
+}
+    </script>
+</body>
+</html>
