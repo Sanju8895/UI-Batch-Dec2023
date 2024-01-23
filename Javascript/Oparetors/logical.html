@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>logical</h1>
+    <script>
+         let a = 10;
+         let b = 20;
+         let c = 30;
+         let d = 10;
+
+        //  && all statment should be true the it will return true
+        console.log("Logical AND &&")
+         console.log(a < b && b > a);
+         console.log(a < b && b > a && a > c);
+         console.log(a < b && b > a && a > c && a>=d && a<=d);
+         console.log(a < b && b > a && a < c && a>=d && a<=d);
+
+         // || any one of the statment should ture for return value true;
+         console.log("Logical OR ||")
+         console.log(a < b || b > a); // true
+         console.log(a > b || b > a || a > c); // true
+         console.log(a > b || b < a || a > c || d>=b || b<=a); // false
+         console.log(a < b || b > a || a < c || a>=d || a<=d);  // ture
+
+
+        //  ! it will conver a true statment to false statment
+         console.log("Logical  NOT !");
+         console.log(a != b) // true
+         console.log( b !== 20); // false
+         console.log(!true); // false
+         console.log(!false); // false
+         
+    </script>
+</body>
+</html>
