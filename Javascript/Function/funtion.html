@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Function: 
+        1-predefined function;
+        2-user defined function
+    </h1>
+
+    <script>
+        // user-defined function
+
+        //Function Declaration;
+        function add(a,b){
+            return a+b;
+        }
+        // let add1= add(10,20);
+        // console.log(add1)
+        // let add2= add(5,20);
+        // console.log(add2)
+        // let add3= add(4,20);
+        // console.log(add3)
+        // let add4= add(6,20);
+        // console.log(add4)
+
+        //Function Expression/anonymous functions
+        let addition= function(x,y){
+            return x+y;
+        }
+       console.log(addition(3,4));
+
+       //Self invoked function/ IIFE
+    //    (function(x,y){  console.log(x+y);})(20,30);
+    (function(p,q){console.log("IIFE result:",p+q)})(15,10);
+
+    // ask user for the inputs and evaluate those inputs
+
+    
+
+    </script>
+</body>
+</html>

@@ -13,14 +13,14 @@
          let c = 30;
          let d = 10;
 
-        //  && all statment should be true the it will return true
-        console.log("Logical AND &&")
-         console.log(a < b && b > a);
-         console.log(a < b && b > a && a > c);
-         console.log(a < b && b > a && a > c && a>=d && a<=d);
-         console.log(a < b && b > a && a < c && a>=d && a<=d);
+        //  && all statment should be true then it will return true
+         console.log("Logical AND &&")
+         console.log(a < b && b > a); // true
+         console.log(a < b && b > a && a > c); // false
+         console.log(a < b && b > a && a > c && a>=d && a<=d);  // false
+         console.log(a < b && b > a && a < c && a>=d && a<=d);  // false
 
-         // || any one of the statment should ture for return value true;
+         // || any one of the statment should be ture for return value true;
          console.log("Logical OR ||")
          console.log(a < b || b > a); // true
          console.log(a > b || b > a || a > c); // true
@@ -33,7 +33,7 @@
          console.log(a != b) // true
          console.log( b !== 20); // false
          console.log(!true); // false
-         console.log(!false); // false
+         console.log(!false); // true
          
     </script>
 </body>
