@@ -8,38 +8,52 @@
         .container{
             background-color: rgb(39, 195, 91);
             height:300px;
-            /* width:300px; */
+            width:300px;
             display: grid;
-            grid-template-columns: 1fr  1fr 1fr;
-            grid-template-rows: 50px 1fr 50px;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
             /* grid-template-columns: 1fr  1fr 1fr;
             grid-template-rows: 1fr 1fr 1fr; */
             column-gap: 12px;
             row-gap: 12px;
-            justify-items: center;
-            align-items: end;
+            /* justify-items: center; */
+            /* justify-items: start; */
+            /* justify-items: center; */
+            /* align-items: start; */
+            /* align-items: center; */
+            /* align-items: end; */
         }
         .item{
             background-color: blue;
-            height:50px;
-            width:50px;
+            /* height:50px;
+            width:50px; */
         }
         .item1{
            /* grid-column-start:1 ; 
-           grid-column-end:4 ;  */
-           grid-column: 1/ span 4;
-           width:100vw;
+           grid-column-end:3 ;  */
+           /* grid-column: 1/ span 2; */
+           /* width:100vw; */
+
+           /* grid-column-start:1 ;
+           grid-row-start: 2;
+           grid-row-end: 4; */
         }
         .item5{
            /* grid-column-start:1 ; 
            grid-column-end:4 ;  */
-           grid-column: 1/ span 4;
-           width:100vw;
+           /* grid-column: 1/ span 4;
+           width:100vw; */
         }
         .item3{
-            /* justify-self: end;
-            align-self: end; */
-            place-self: center;
+            /* justify-self: start; */
+            /* justify-self: center; */
+            /* justify-self: end; */
+            /* align-self: start; */
+            /* align-self: center; */
+            /* align-self: end; */
+
+            /* for both align-self and justify-self */
+            /* place-self:center; */
         }
     </style>
 </head>
@@ -52,8 +66,9 @@
         <div class="item item3">Item 3</div>
         <div class="item item4">Item 4</div>
         <div class="item item5">Item 5</div>
-        <!-- <div class="item item6">Item 6</div>
-        <div class="item item7">Item 7</div> -->
+        <div class="item item6">Item 6</div>
+        <div class="item item7">Item 7</div>
+        <div class="item item8">Item 8</div>
 
     </div>
 </body>

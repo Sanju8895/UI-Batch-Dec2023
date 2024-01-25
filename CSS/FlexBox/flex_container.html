@@ -6,12 +6,14 @@
     <title>Document</title>
     <style>
         .parent{
+            height:300px;
             border:2px solid green;
             display: flex;
             flex-wrap: wrap;
-            /* flex-direction:column-reverse */
-            flex-direction:column;
-            /* flex-direction:row */
+            /* flex-direction:column; */
+            /* flex-direction:column-reverse; */
+            /* flex-direction:row; */
+            /* flex-direction:row-reverse; */
             /* justify-content: center; */
             /* justify-content: start; */
             /* justify-content: end; */
@@ -19,7 +21,7 @@
             /* justify-content: space-between; */
             /* align-items: start; */
             /* align-items: end; */
-            /* align-items: center; */
+            align-items: center;
 
         }
         .child{
@@ -28,6 +30,30 @@
             background-color: blue;
             margin:10px;
             color:white;
+        }
+        .container{
+            height:300px;;
+            width:300px;
+            border:2px solid red;
+
+            /* with flex */
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+             
+            /* width position */
+            position: relative;
+        }
+        .item{
+            height:50px;
+            width:50px;
+            background-color: green;
+
+            /* with position */
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%, -50%);
         }
     </style>
 </head>
@@ -46,13 +72,17 @@
         <div class="child">Child 1</div>
         <div class="child">Child 2</div>
         <div class="child">Child 3</div>
-        <div class="child">Child 4</div>
-        <!-- <div class="child">Child 5</div>
+        <!-- <div class="child">Child 4</div>
+        <div class="child">Child 5</div>
         <div class="child">Child 6</div>
         <div class="child">Child 7</div>
         <div class="child">Child 8</div>
         <div class="child">Child 9</div>
         <div class="child">Child 10</div> -->
+    </div>
+
+    <div class="container">
+        <div class="item"></div>
     </div>
 </body>
 </html>
