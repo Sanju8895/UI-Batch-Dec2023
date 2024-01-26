@@ -18,6 +18,9 @@
         function add(a,b){
             return a+b;
         }
+
+        // add(2,3);
+
         // let add1= add(10,20);
         // console.log(add1)
         // let add2= add(5,20);
@@ -28,14 +31,15 @@
         // console.log(add4)
 
         //Function Expression/anonymous functions
-        let addition= function(x,y){
+        let addition = function(x,y){
             return x+y;
         }
        console.log(addition(3,4));
 
        //Self invoked function/ IIFE
-    //    (function(x,y){  console.log(x+y);})(20,30);
-    (function(p,q){console.log("IIFE result:",p+q)})(15,10);
+       (function(p,q){console.log(p+q)})(15,25);
+    // (function(x,y){  console.log(x+y);})(20,30);
+    // (function(p,q){console.log("IIFE result:",p+q)})(15,10);
 
     // ask user for the inputs and evaluate those inputs
 

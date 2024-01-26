@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1- global scope; 
+          //if you are declaring a variable inside of the script and outside of functions and blocks;
+          //if you are declaring a variable without any keyword then you can call it as global scope
+
+        // 2-local scope
+        // if you are declaring a variable inside any functions and blocks you can call it as local scope
+
+        let a=10; // global 
+        let x=   "X value";
+        
+           console.log("after variable declaration:",a);
+
+        function foo() {
+            b=20; // global
+            let c=30 // local scope
+            console.log("a value Inside the function:",a) // yes
+            console.log("B value Inside the function:",b) // yes
+            console.log("c value Inside the function:",c) // yes
+        }
+        foo();
+
+        if(true){
+            let d= 40 //local
+            console.log("A value inside the block:",a); // yes
+            console.log(" B value inside the block:",b); // yes
+            // console.log(" c value inside the block:",c); //no
+            console.log(" d value inside the block:",d); // yes
+        }
+
+        console.log("a value outside of functions and blocks:",a); // yes
+        console.log("b value outside of functions and blocks:",b); // yes
+        // console.log("c value outside of functions and blocks:",c); //no
+        // console.log("d value outside of functions and blocks:",d); //no
+
+
+        // Var let and const scope;
+        function f1(){
+            var a= 10;
+            let b=20;
+            const c =30;
+            if(true){
+                var d= 40; // function scope
+                let e= 50; // block
+                const f =60; // block
+
+            console.log("a value inside of block:",a) // yes
+            console.log("b value inside of block:",b) // yes
+            console.log("c value inside of block:",c) // yes
+            console.log("d value inside of block:",d) // yes
+            console.log("e value inside of block:",e) // yes
+            console.log("f value inside of block:",f) // yes
+            console.log(x);
+            }
+
+            console.log("a value inside function and outside of block:",a)//  yes
+            console.log("b value inside function and outside of block:",b) // yes
+            console.log("c value inside function and outside of block:",c) //yes
+            console.log("d value inside function and outside of block:",d) // yes
+            // console.log("e value inside function and outside of block:",e) // no
+            // console.log("f value inside function and outside of block:",f) // no
+        }
+        f1();
+     
+
+
+    </script>
+</body>
+</html>
