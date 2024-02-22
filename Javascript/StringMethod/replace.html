@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // includes always return a boolean value
+        let str="this is a javascript session and no one showing interst for this Session";
+         document.write(str,"<br>");
+         document.write(str.replace("session","class"),"<br>");
+         document.write(str.replace(/session/gi,"class"),"<br>"); // regx
+         document.write(str.replaceAll("session","class"));
+
+        //  Note:g= global,i=caseinsensitive
+    </script>
+</body>
+</html>
