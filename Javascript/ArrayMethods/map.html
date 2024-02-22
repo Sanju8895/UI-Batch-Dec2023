@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let arr=[1,2,3,4,5];
+        //  arr.map(f1);
+
+        //  function f1(val, ind){
+        //     console.log(val+5)
+        //  }
+
+
+        let employees= [
+            {eid:101,name:'employe1', sal:5000 },
+            {eid:102,name:'employe2', sal:6000 },
+            {eid:103,name:'employe3', sal:7000 },
+            {eid:104,name:'employe4', sal:8000 },
+            {eid:105,name:'employe5', sal:9000 }
+        ];
+
+        // let empName= employees[3].sal;
+        // console.log(empName)
+
+        //to increse 500 salary to all employees;
+
+        let updateddata = employees.map(f1);
+
+         function f1(ele, ind, arr){
+            // console.log(ele,"===",ind,"====",arr)
+            return ele.sal+500;
+         }
+  console.log(updateddata)
+        
+
+        
+    </script>
+</body>
+</html>
