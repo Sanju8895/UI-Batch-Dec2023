@@ -10,13 +10,29 @@
         let arr=[1,2,3,4,5];
 
         //return the some of an array;
-        let result=arr.reduce(f1);
+        // let result=arr.reduce(f1);
+        // console.log(result)
+
+        // function f1(acc, int){
+        //     console.log(acc,"======" ,int)
+        //     return acc+int; ;
+        // }
+
+     Array.prototype.myReduce= function(cb, intVal){
+        let acc= intVal;
+        for(let i= 0; i< this.length; i++){
+            acc = acc ? cb(acc, this[i],i,this) :this[i];
+        }
+
+        return acc;
+     }
+
+
+        let result= arr.myReduce((acc, int)=> {return acc+int})
         console.log(result)
 
-        function f1(acc, int){
-            console.log(acc,"======" ,int)
-            return acc+int; ;
-        }
+        // let result= arr.reduce((acc, int)=> {return acc+int})
+        // console.log(result)
     </script>
 </body>
 </html>

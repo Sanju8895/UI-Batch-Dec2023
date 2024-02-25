@@ -7,12 +7,66 @@
 </head>
 <body>
     <script>
-        // window.alert("Hi I am Sanjaya");
-        // let confirm = window.confirm("Are you sure you want to close");
-        // console.log(confirm)
-       let mathMark=  window.prompt("your Math mark");
-       console.log(mathMark);
-       console.log("Type of prompt value",typeof mathMark);
+       // remove the duplicates;
+
+        let employees=[
+         {name:'sanjaya',age:25,salary:5000, details:{eid:101,add: "bangalore"}},
+         {name:'rahul',age:26,salary:6000,details:{eid:102,add: "Pune"}},
+         {name:'rakesh',age:27,salary:7000,details:{eid:103,add: "HYD"}},
+         {name:'prakash',age:28,salary:8000,details:{eid:104,add: "BBSR"}},
+         {name:'prakash',age:28,salary:8000,details:{eid:104,add: "bangalore"}}
+     ];
+
+    function removeDuplicates(input){
+    let  duplicateEmp=[];
+    input.forEach((emp, ind, self)=>{
+        // if(self.indexOf(emp.details.eid!==-1)){
+        console.log(ind,"======")
+        console.log(self.indexOf(emp.details.eid))
+        duplicateEmp.push(emp)
+    //   }
+    })
+   
+    return duplicateEmp;
+};
+
+let output=removeDuplicates(employees)
+console.log(output);
+
+
+
+
+      
+    //  let uniqueEmp=[];
+    //  let uniqueMap={};
+    //    employees.forEach((employee)=>{
+    //     // console.log(employee)
+    //     let key= `${employee.name}-${employee.age}-${employee.salary}`;
+    //     if(!uniqueMap[key]){
+    //         uniqueMap[key]= true;
+    //         uniqueEmp.push(employee);
+    //     }
+    //  })
+    //  console.log(uniqueEmp);
+
+    // let arr= [1,2,3,1,4,3,5];
+    // let duplicates= [...new Set(arr)];
+
+    // let duplicates= arr.filter((ele, ind)=>{return arr.indexOf(ele)===ind})
+    // console.log(duplicates);
+
+    // let duplicates= [];
+    // for(let i=0; i<arr.length; i++){
+    //    if(arr.indexOf(arr[i])=== i){
+    //          duplicates.push(arr[i]);
+    //    }
+    // }
+    // console.log(duplicates);
+      
+
+
+
+
     </script>
 </body>
 </html>

@@ -17,11 +17,29 @@
         // }
         // console.log(evenNum)
 
-        let output=arr.filter(f1);
-        console.log(output)
-        function f1(ele){
-            return ele%2==0;
-        }
+        // let output=arr.filter(f1);
+        // console.log(output)
+        // function f1(ele){
+        //     return ele%2==0;
+        // }
+
+         Array.prototype.myFilter= function(cb){
+
+            let temp =[];
+
+            for(let i=0; i < this.length; i++){
+                if(cb(this[i],i,this)){
+                    temp.push(this[i])
+                }
+            }
+            return temp;
+         }
+
+        // let output= arr.filter((ele)=>{ return ele%2==0;})
+        // console.log(output);
+
+        let output= arr.myFilter((ele)=>{ return ele%2==0;})
+        console.log(output);
     </script>
 </body>
 </html>

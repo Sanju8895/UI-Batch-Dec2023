@@ -8,19 +8,32 @@
 <body>
     <script>
         // add and remove from starting of an array
-    //  let employees=["rajesh","mukesh","Shriti"];
+     let employees=["rajesh","mukesh","Shriti"];
     //     console.log(employees)
     //     employees.unshift("Sharath"); // add
     //     console.log(employees);
     //     employees.shift(); // remove
     //     console.log(employees) 
 
-const arr = [1, 2, 3, 4, 5];
- for (var i = 0; i < arr.length; i++) { 
-  setTimeout(function () {   
-    console.log(arr[i]);
-  }, 1000); 
+// const arr = [1, 2, 3, 4, 5];
+//  for (var i = 0; i < arr.length; i++) { 
+//   setTimeout(function () {   
+//     console.log(arr[i]);
+//   }, 1000); 
+// }
+
+
+Array.prototype.myUnshift= function (){
+
+    for(let i= 0; arguments.length; i++){
+        this[this.length]=arguments[i] 
+    }
+
+    return this.length;
 }
+
+employees.myUnshift('rahul');
+console.log(employees);
     </script>
 </body>
 </html>

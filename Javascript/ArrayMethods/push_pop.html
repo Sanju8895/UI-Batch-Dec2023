@@ -8,11 +8,23 @@
 <body>
     <script>
         let employees=["rajesh","mukesh","Shriti"];
-        console.log(employees)
-        employees.push("Sharath");
-        console.log(employees);
-        employees.pop();
-        console.log(employees)
+        // console.log(employees)
+        // employees.push("Sharath");
+        // console.log(employees);
+        // employees.pop();
+        // console.log(employees)
+
+        Array.prototype.myPush= function(){
+            for(let i= 0; i< arguments.length; i++){
+                this[this.length]= arguments[i]
+            }
+            return this.length;
+        }
+
+       employees.myPush("Sharath","mahesh","sanjaya");
+       console.log("original value:",employees);
+
+   
     </script>
 </body>
 </html>

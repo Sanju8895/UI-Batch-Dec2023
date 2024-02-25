@@ -7,6 +7,8 @@
 </head>
 <body>
     <script>
+
+        // Exa:1
         // let arr=[1,2,3,4,5];
         //  arr.map(f1);
 
@@ -14,28 +16,45 @@
         //     console.log(val+5)
         //  }
 
+        // Exa:2
 
-        let employees= [
-            {eid:101,name:'employe1', sal:5000 },
-            {eid:102,name:'employe2', sal:6000 },
-            {eid:103,name:'employe3', sal:7000 },
-            {eid:104,name:'employe4', sal:8000 },
-            {eid:105,name:'employe5', sal:9000 }
-        ];
+//         let employees= [
+//             {eid:101,name:'employe1', sal:5000 },
+//             {eid:102,name:'employe2', sal:6000 },
+//             {eid:103,name:'employe3', sal:7000 },
+//             {eid:104,name:'employe4', sal:8000 },
+//             {eid:105,name:'employe5', sal:9000 }
+//         ];
 
-        // let empName= employees[3].sal;
-        // console.log(empName)
+//         // let empName= employees[3].sal;
+//         // console.log(empName)
 
-        //to increse 500 salary to all employees;
+//         //to increse 500 salary to all employees;
 
-        let updateddata = employees.map(f1);
+//         let updateddata = employees.map(f1);
 
-         function f1(ele, ind, arr){
-            // console.log(ele,"===",ind,"====",arr)
-            return ele.sal+500;
-         }
-  console.log(updateddata)
+//          function f1(ele, ind, arr){
+//             // console.log(ele,"===",ind,"====",arr)
+//             return ele.sal+500;
+//          }
+//   console.log(updateddata)
         
+
+   // Exa:3 polyfills:
+let arr =[1,2,3,4];
+// let MultipleWithTwo= arr.map((ele)=>{return ele*2});
+// console.log(MultipleWithTwo);
+// debugger
+
+Array.prototype.myMap= function(cb){
+    let temp= [];
+    for(let i=0; i< this.length; i++){
+        temp.push(cb(this[i], i, this));
+    }
+    return temp;
+}
+let MultipleWithTwo= arr.myMap((ele)=>{return ele*4});
+console.log(MultipleWithTwo);
 
         
     </script>
