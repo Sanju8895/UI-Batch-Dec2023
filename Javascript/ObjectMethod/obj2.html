@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         let obj={
+            fname:"Roshan",
+            lname:"Sharma",
+            age:20, 
+            add:"Bangalore",
+            fullname: function(){return this.fname+" "+ this.lname}
+        
+        };
+
+        console.log(obj.fullname());
+
+        // console.log(Object.keys(obj));
+        // console.log(Object.values(obj));
+        // console.log(Object.entries(obj));
+
+        // const objValues= Object.val  ues(obj);
+
+        let JsonFormat=JSON.stringify(obj)
+        console.log(JsonFormat);
+        console.log(JSON.parse(JsonFormat));
+
+    </script>
+</body>
+</html>

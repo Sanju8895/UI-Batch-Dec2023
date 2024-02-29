@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    'use strict'
+    //  global scope
+    console.log("This is from gobal scope:",this);
+
+
+    function f(){
+        // function scope
+        console.log("this is from inside function:",this);
+    }
+
+    f();
+
+    let obj= {
+        name:"sanjaya",
+        age:20,
+        thisObj: this,  // window
+        thisObj1: function(){ return this }  // refer to own object
+    }
+    console.log("This inside of an object:",obj.thisObj1())
+
+
+
+
+    </script>
+</body>
+</html>
