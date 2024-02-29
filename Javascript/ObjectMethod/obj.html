@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Object is a data type which can store data with key and value pair
+      // syntax:
+      // let obj= {key1:"value1",key2:"value2"};
+
+      // Creating Object
+      // Object Literal:
+      //  with new Keyword Object Constructor;
+      //  with Object.crete();
+      //  with Object.assign();
+
+      // Object Literal:
+
+      const obj = { name: "sachin", age: 20, add: "MH" };
+
+      // With new keyword:
+      const obbj1 = new Object({ name: "sanju", age: 21, add: "odisha" });
+
+      // Object Constructor
+      function Person(name, age, add) {
+        this.name = name;
+        this.age = age;
+        this.add = add;
+      }
+
+      let person1 = new Person("Rahul", 22, "BBSR");
+      // console.log(person1);
+
+      // With Object.crete();
+      const obj2 = Object.create({ name: "Roshan", age: 23, add: "BLR" });
+      // console.log(obj2);
+
+      // Object.assign
+
+      const obj3 = Object.assign(obj);
+      // console.log(obj3);
+
+      // How you can access Object value
+      const myObj = { name: "sachin", age: 20, add: "MH" };
+      // console.log(myObj.name);
+      // console.log(myObj.age);
+      // console.log(myObj.add);
+
+      const Students = {
+        "first name": "Sanjaya",
+        "last name": "Nayak",
+        age: 25,
+        add: "odisha",
+      };
+      // console.log(Students["first name"]);
+      // console.log(Students.add);
+      // console.log(Students["last name"]);
+
+      const employee = [
+        {
+          empId: 101,
+          empName: "Sontosh",
+          sal: 5000,
+          add: { city: "Bangalore", pinCode: 560037, location: "Marathahalli" },
+        },
+        {
+          empId: 102,
+          empName: "Mukesh",
+          sal: 6000,
+          add: { city: "BBSR", pinCode: 751006, location: "Vani Vihar" },
+        },
+        {
+          empId: 103,
+          empName: "Suman",
+          sal: 7000,
+          add: { city: "HYD", pinCode: 400564, location: "Sanjaya Nagar" },
+        },
+        {
+          empId: 104,
+          empName: "Jyothi",
+          sal: 8000,
+          add: { city: "MH", pinCode: 344532, location: "Mg Road" },
+        },
+        {
+          empId: 105,
+          empName: "Srishsti",
+          sal: 9000,
+          add: { city: "Kollkata", pinCode: 856475, location: "Hatibagan" },
+        },
+      ];
+
+      for (let i = 0; i < employee.length; i++) {
+        // console.log(
+        //   employee[i].add.city +
+        //     "=====" +
+        //     employee[i].add.location +
+        //     "=====" +
+        //     employee[i].add.pinCode
+        // );
+      }
+
+      const employees = [
+        {
+          empId: 101,
+          empName: "Sontosh",
+          sal: 5000,
+          add: { city: "Bangalore", pinCode: 560037, location: "Marathahalli" },
+          empProjectDetails: [
+            { Account: "cisco", project1: "TVS Oops", project2: "SCS" },
+            { Account: "Catterpillar", project1: "NMT", project2: "POD" },
+          ],
+        },
+        {
+          empId: 102,
+          empName: "Mukesh",
+          sal: 6000,
+          add: { city: "BBSR", pinCode: 751006, location: "Vani Vihar" },
+          empProjectDetails: [
+            { Account: "FedEx", project1: "TVS Oops", project2: "SCS" },
+            { Account: "PropertyOk", project1: "NMT", project2: "POD" },
+          ],
+        },
+        {
+          empId: 103,
+          empName: "Suman",
+          sal: 7000,
+          add: { city: "HYD", pinCode: 400564, location: "Sanjaya Nagar" },
+          empProjectDetails: [
+            { Account: "Amazone", project1: "TVS Oops", project2: "SCS" },
+            { Account: "Samsumng", project1: "NMT", project2: "POD" },
+          ],
+        },
+        {
+          empId: 104,
+          empName: "Jyothi",
+          sal: 8000,
+          add: { city: "MH", pinCode: 344532, location: "Mg Road" },
+          empProjectDetails: [
+            { Account: "Harmon", project1: "TVS Oops", project2: "SCS" },
+            { Account: "Boing", project1: "NMT", project2: "POD" },
+          ],
+        },
+        {
+          empId: 105,
+          empName: "Srishsti",
+          sal: 9000,
+          add: { city: "Kollkata", pinCode: 856475, location: "Hatibagan" },
+          empProjectDetails: [
+            { Account: "Google", project1: "TVS Oops", project2: "SCS" },
+            { Account: "HP", project1: "NMT", project2: "POD" },
+          ],
+        },
+      ];
+
+      for(let i=0; i< employees.length; i++){
+        let empProject=employees[i].empProjectDetails;
+          for(let p=0; p< empProject.length; p++){
+                console.log(empProject[p].Account);
+        }
+      }
+    </script>
+  </body>
+</html>
