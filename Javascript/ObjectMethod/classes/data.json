@@ -1,0 +1,10 @@
+{
+    "Students":[
+        {"name": "John", "age":20, "add":"Blr"},
+        {"name": "Rhul", "age":21, "add":"Blr"},
+        {"name": "Roshon", "age":22, "add":"Blr"},
+        {"name": "Vibek", "age":23, "add":"Blr"}
+    ]
+}
+
+javascript object notation
