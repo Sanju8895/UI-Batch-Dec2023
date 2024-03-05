@@ -7,13 +7,14 @@
 </head>
 <body>
     <script>
-
-
             class Student{
                 constructor(name, age, add){
                     this.StudName = name;
                     this.StudAge = age;
                     this.StudAdd = add;
+                }
+                StudCard1(){
+                  return `my name is ${this.StudName} and  age is ${this.StudAge}`
                 }
             }
 
@@ -24,12 +25,16 @@
                 this.studRollNum= rollNum;
                 this.studSection= section;
               }
+              StudCard2(){
+                // console.log("This is from StudCard2:",this)
+                return `${this.StudCard1()} I'm from section ${this.studSection}`
+              }
             }
 
              let student1= new StdDetials("Rakesh",20,"BBSR", 101, "A");
              let student2= new StdDetials("Paresh",19,"BLR", 102, "B");
             console.log(student1);
-            console.log(student2);
+            console.log(student2.StudCard2());
     </script>
 </body>
 </html>
