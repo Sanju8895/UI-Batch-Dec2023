@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <script>
+           let obj= {
+            a:10,
+            b:20,
+            c:30
+           }
+
+        //    obj.d= 40;
+        //    obj.a=15;
+        //    delete obj.d;
+        //    console.log(obj);
+
+        //    seal  : update-yes, read-yes, add-no, delete-no
+        // Object.seal(obj);
+
+        // obj.d= 40; // no
+        // obj.a=15;  //yes
+        // delete obj.a;  //no
+        // console.log(obj);
+
+    //    let isSealedObj= Object.isSealed(obj); return true or flase
+        // console.log(isSealedObj);
+
+
+        // Freeze  add-no , update-no , delete-no , read-yes
+        // Object.freeze(obj);
+        //   obj.d= 40;  // no
+        // obj.a=15;  //no
+        // delete obj.a;  //no
+        let isFreezedObj= Object.isFrozen(obj);
+        console.log(isFreezedObj);
+        console.log(obj);        
+     </script>
+</body>
+</html>

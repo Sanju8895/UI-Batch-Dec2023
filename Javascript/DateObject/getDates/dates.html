@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>This is Digital clock:</h1>
+    <div>Time is: <span id="clock" ></span></div>
+    <script>
+    //  let date= new Date();
+    //     console.log(date);
+
+    //  let year= date.getFullYear();
+    //  console.log(year);
+    //  let month= date.getMonth();
+    //  console.log(month);
+    //  let day= date.getDay();
+    //  console.log(day);
+    //  let todayDate= date.getDate();
+    //  console.log(todayDate);
+    //  let timeIs= date.getTime();
+    //  console.log(timeIs);
+
+
+    //  static Clock
+    
+    setInterval(()=>{
+       let date= new Date();
+       let hours= date.getHours();
+       let minutes= date.getMinutes();
+       let seconds= date.getSeconds();
+       let timeIs= `${hours} : ${minutes} : ${seconds}`
+       document.getElementById('clock').innerHTML=timeIs;
+   },1000)
+    
+
+
+    
+
+    </script>
+</body>
+</html>
