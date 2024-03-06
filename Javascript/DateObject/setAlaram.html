@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>Clock: <span id="clock"></span></div>
+     <script>
+        let clock= setInterval( function(){
+            const date= new Date();
+            let h=date.getHours();
+            let m= date.getMinutes();
+            let s= date.getSeconds();
+            let  time= `${h}:${m}:${s} `
+            document.getElementById("clock").innerHTML= time;
+         }, 1000)
+         clock();
+
+         
+         function alaram(input){
+            //  let date= new Date();
+            //  console.log('Alaram:', input())
+               console.log("alaram function", input());
+         }
+         console.log(alaram(clock));
+     </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <script>
+    //   Date Formats
+
+    // year= YYYY;
+    // date= DD;
+    // month= MM;
+    // -, /
+
+// Date input Formats
+
+// ISO Date	    "2015-03-25" (The International Standard)
+// Short Date	"03/25/2015"
+// Long Date	"Mar 25 2015" or "25 Mar 2015"
+
+
+
+        let date = new Date('2015-03-25');
+        // console.log(date);
+
+        let fullYear= new Date();
+        fullYear.setFullYear('2023');
+        // console.log(fullYear);
+
+        const d = new Date();
+        d.setFullYear(2020, 11, 3); 
+        // console.log(d);  
+
+
+        // Set Month
+
+        const m= new Date();
+        m.setMonth(11);
+        // console.log(m);
+
+
+        const day= new Date();
+        day.setDate(20);
+        console.log(day);        
+
+    </script>
+</body>
+</html>
