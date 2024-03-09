@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   function outer() {
+      //     var a = 10;
+
+      //     return {
+      //       add: function (input) {
+      //         console.log(a + input);
+      //       },
+      //     };
+      //   }
+      //   //   console.log(a)
+      //   const out = outer();
+      //   out.add(15);
+      function account() {
+        var amount = 1000;
+        return {
+          deposit: function (depositAmount) {
+            if (depositAmount > 0) {
+            //   let totalAmount = amount + depositAmount;
+            amount+=depositAmount;
+              console.log("The amount from the deposit:", amount)
+            } else {
+              window.alert("Please add a positive amount");
+            }
+          },
+          withdrawl: function (withdrawAmount) {
+            window.alert("You don't have authority to withdraw the amount");
+          },
+
+          balance: function (){
+            console.log("The balanced amount:", amount)
+          }
+        };
+      }
+      let myAccount = account();
+    //   myAccount.deposit(-600) ;
+      myAccount.balance();
+      myAccount.withdrawl(500);
+
+    </script>
+  </body>
+</html>
