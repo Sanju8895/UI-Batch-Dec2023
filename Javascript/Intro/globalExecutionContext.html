@@ -8,35 +8,35 @@
 <body>
      <script>
         // 'use strict'
-        // console.log(a);
-        // var a= 10;
-        // console.log(a);
-
-        // function fn(){
-        //     var a= 25;
-        //     var b= 20;
-        //     console.log(a);
-        //     console.log(b);
-        // } 
-        // fn();
-        // console.log(a);
-        // console.log  (b);
-
-        //undefined, 25, 20, 25, 20
-
-
-
-        fn();
-
-        var fn = function(){
-            console.log('second');
-        }
-        fn();
+        console.log("a 1st",a);
+        var a= 10;
+        console.log("a 2nd",a);
 
         function fn(){
-            console.log('first');
-        }
+            var a= 25;
+            var b= 20;
+            console.log(a);
+            console.log(b);
+        } 
         fn();
+        console.log("a 3rd",a);
+        console.log("a 4th",a);
+
+        // console.log  (b);
+
+       // output: undefined, 10 , 25, 20 , 10 , referenceError
+
+        // fn();
+
+        // var fn = function(){
+        //     console.log('second');
+        // }
+        // fn();
+
+        // function fn(){
+        //     console.log('first');
+        // }
+        // fn();
 
         //output:  first, second, second
      </script>
