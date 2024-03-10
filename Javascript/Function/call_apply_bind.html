@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Call , apply , Bind  are pre defined functions where you can borrow a function and you can change 
+        // the this value accoundingly
+        
+        // brrowing function from anather object
+        // person1.fullname.call(person2);
+        // person1.fullname.call(person3);
+        // bind will return a copy of a function 
+
+        function fullname(city, pin){
+                console.log(this.fname +" "+ this.lname+" from "+ city +" pincaode is "+  pin);
+            }
+        let person1= {
+            fname: "Sachin",
+            lname:"TendulKar",
+        }
+        // fullname.call(person1, "Pune", 647398);
+        // fullname.apply(person1, ["Pune", 647398]);
+        let personName1 =  fullname.bind(person1, "Pune", 647398);
+        personName1();
+
+        let person2= {
+            fname: "Sanjaya",
+            lname:"Nayak",
+        }
+        // fullname.call(person2, "BBSR", 867548);
+        // fullname.apply(person2, ["Pune", 647398]);
+        let personName2 =  fullname.bind(person2, "Pune", 647398);
+        personName2();
+
+
+        let person3= {
+            fname: "Rupesh",
+            lname:"Sharma",
+        }
+        // fullname.call(person3, "Bihar", 567453);
+        // fullname.apply(person3, ["Pune", 647398]);
+        let personName3 =  fullname.bind(person3, "Pune", 647398);
+        personName3();
+
+
+        
+    </script>
+</body>
+</html>

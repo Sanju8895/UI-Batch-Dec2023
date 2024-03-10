@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="counter"> Value is : <span class="counter_value"></span></div>
+    <button id="inc" onclick="output.increment()">Increment</button>
+    <button id="dec" onclick="output.decrement()">Decrement</button>
+    <script>
+        //  let count= 0;
+         
+        //     function increment(){
+        //      count++
+        //      document.querySelector('.counter_value').innerHTML= count;
+        //     }
+        //     function decrement(){
+        //         count--;
+        //      document.querySelector('.counter_value').innerHTML= count;
+        //     }
+
+        function counter(){
+
+            // This is private Variable
+            let count= 0;
+            document.querySelector('.counter_value').innerHTML= count;
+            
+            // These all Public methods
+            return {
+                increment: function(){
+                    // console.log(count);
+                    count++;
+                    document.querySelector('.counter_value').innerHTML= count;
+                    // console.log(count);
+                },
+                decrement: function(){
+                    if(count <= 0){
+                        count;;
+                    }else{
+                        count--;
+                    }
+                    document.querySelector('.counter_value').innerHTML= count;
+                    // console.log(count);
+                }
+            }   
+        }
+        let output= counter();
+
+        // console.log(output.increment());
+    
+           
+
+    
+
+    </script>
+</body>
+</html>

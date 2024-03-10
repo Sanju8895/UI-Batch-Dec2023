@@ -7,45 +7,45 @@
 </head>
 <body>
     <script>
-    // function find(){
-    //         let a= [];
-    //         for(let i=0; i< 100000; i++){
-    //             a[i]=i*i;
-    //             // console.log(a[i])
-    //         }
-    //         return function(index)
-    //         {
-    //           console.log(a[index]);
-    //         }
+       function find(){
+            let a= [];
+            for(let i=0; i< 100000; i++){
+                a[i] = i*i;
+                // console.log(a[i])
+            }
+            return function(index)
+            {
+              console.log(a[index]);
+            }
+        }
+
+        let output= find();
+        console.time('6');
+        output(6);
+        console.timeEnd('6');
+
+        console.time('50');
+        output(50);
+        console.timeEnd('50')
+
+    //     function operation(){
+    //         let num= [];
+    //         for(let i=0;i<1000000;i++){
+    //             num[i] = i * i;
     //     }
 
-        // let closureIs= find();
-        // console.time('6');
-        // closureIs(6);
-        // console.timeEnd('6');
+    //     return function(input){
+    //         console.log(num[input]);
+    //     }
+    // }
 
-        // console.time('12');
-        // closureIs (12);
-        // console.timeEnd('12')
-
-        function operation(){
-            let num= [];
-            for(let i=0;i<1000000;i++){
-                num[i]= i*i;
-        }
-
-        return function(input){
-            console.log(num[input]);
-        }
-    }
-
-    let output = operation()
-     console.time('15')
-     output(10);
-     console.timeEnd('15')
-     console.time('70')
-     output(70);
-     console.timeEnd('70')
+    // let output = operation()
+    //  console.time('15')
+    //  output(10);
+    //  console.timeEnd('15')
+    //  console.time('70')
+    //  output(70);
+    //  console.timeEnd('70')
     </script>
 </body>
 </html>
